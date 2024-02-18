@@ -1,22 +1,31 @@
 package main
 
 import (
+	"cards-service/auth/internal/server"
+	"cards-service/auth/internal/service/auth"
+	authservices "cards-service/auth/internal/service/auth/auth_services"
+	jwtservice "cards-service/auth/internal/service/jwt_service"
+	"cards-service/auth/internal/storage"
 	"database/sql"
-	"github.com/modaniru/cards-auth-service/internal/storage"
+
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"log/slog"
 	"net/http"
 	"os"
 
 	_ "github.com/lib/pq"
-	"github.com/modaniru/cards-auth-service/internal/server"
-	"github.com/modaniru/cards-auth-service/internal/service/auth"
-	authservices "github.com/modaniru/cards-auth-service/internal/service/auth/auth_services"
-	jwtservice "github.com/modaniru/cards-auth-service/internal/service/jwt_service"
 	"github.com/modaniru/cards-auth-service/sqlc/db"
 	"github.com/phsym/console-slog"
 	_ "net/http/pprof"
 )
+
+/*
+todo migration
+todo configuration
+todo dockerfile
+todo docker-compose
+todo api gateway
+*/
 
 func main() {
 	//token := flag.String("t", "", "vk app token stub")

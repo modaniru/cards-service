@@ -1,9 +1,9 @@
 package authservices
 
 import (
+	"cards-service/auth/internal/storage"
 	"context"
 	"encoding/json"
-	"github.com/modaniru/cards-auth-service/internal/storage"
 	"strconv"
 
 	"github.com/SevereCloud/vksdk/v2/api"

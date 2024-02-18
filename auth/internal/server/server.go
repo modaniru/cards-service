@@ -1,9 +1,9 @@
 package server
 
 import (
+	"cards-service/auth/internal/service/auth"
+	jwtservice "cards-service/auth/internal/service/jwt_service"
 	"github.com/go-chi/chi/v5"
-	"github.com/modaniru/cards-auth-service/internal/service/auth"
-	jwtservice "github.com/modaniru/cards-auth-service/internal/service/jwt_service"
 )
 
 type Server struct {
